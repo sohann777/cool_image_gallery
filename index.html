@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation menu for flexbox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #151515;
+      }
+      .tab-container {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: #353535;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 20px;
+        flex-flow: row wrap;
+        margin: 10px;
+      }
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      ul li {
+        list-style: none;
+        background-color: #151515;
+        margin: 10px;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+        border-radius: 20px;
+        color: #ddd;
+        font-family: "Quicksand", sans-serif;
+        transition: background-color 0.8s ease;
+      }
+
+      ul li:hover {
+        background-color: rgb(30, 150, 255);
+      }
+
+      .cards {
+        background-color: #353535;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .card img {
+        width: 200px;
+        border-radius: 20px;
+      }
+
+      .card {
+        background: linear-gradient(to bottom, #151515, #252525);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: 250px;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        font-family: "Quicksand", sans-serif;
+        color: #ddd;
+        transition: transform 0.3s ease;
+        position: relative;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, #151515, #252525);
+        border-radius: 20px;
+        opacity: 1;
+        transition: opacity 1s ease;
+        z-index: -1;
+      }
+      .card:hover::before {
+        opacity: 0;
+      }
+      .card:hover {
+        transform: scale(1.05);
+        background: linear-gradient(
+          to bottom,
+          rgb(10, 37, 61),
+          rgb(10, 37, 61)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="tab-container">
+        <ul id="tabs">
+          <li class="tab" id="tab1">Home</li>
+          <li class="tab" id="tab2">Content</li>
+          <li class="tab" id="tab3">Blogs</li>
+          <li class="tab" id="tab4">About us</li>
+          <li class="tab" id="tab5">Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <div class="cards">
+      <div class="card" id="card1">
+        <h2>title 1</h2>
+        <img src="https://picsum.photos/300" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card2">
+        <h2>title 2</h2>
+        <img src="https://picsum.photos/400" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card3">
+        <h2>title 3</h2>
+        <img src="https://picsum.photos/320" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card4">
+        <h2>title 4</h2>
+        <img src="https://picsum.photos/330" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card5">
+        <h2>title 5</h2>
+        <img src="https://picsum.photos/310" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card6">
+        <h2>title 6</h2>
+        <img src="https://picsum.photos/360" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card7">
+        <h2>title 7</h2>
+        <img src="https://picsum.photos/301" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card8">
+        <h2>title 8</h2>
+        <img src="https://picsum.photos/335" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card9">
+        <h2>title 9</h2>
+        <img src="https://picsum.photos/325" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" id="card10">
+        <h2>title 10</h2>
+        <img src="https://picsum.photos/315" alt="" />
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </body>
+</html>
